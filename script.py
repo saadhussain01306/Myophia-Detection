@@ -33,9 +33,6 @@ def predict_image(image):
     confidence_score = predictions[0][predicted_class_index] * 100
     predicted_class_label = class_labels[predicted_class_index]
 
-    # Add condition for classification adjustment
-    if 80 <= confidence_score < 95:
-        predicted_class_label = "Normal"
 
     return predicted_class_label, confidence_score
 
